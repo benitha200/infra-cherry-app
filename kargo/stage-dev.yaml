@@ -1,0 +1,20 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: dev
+  namespace: kargo
+spec:
+  subscriptions:
+    repos:
+      - repoURL: https://github.com/YOUR_ORG/your-repo
+        commit: latest
+  promotionMechanisms:
+    gitRepoUpdates:
+      - repoURL: https://github.com/YOUR_ORG/your-repo
+        writeBranch: main
+        files:
+          - path: infra/environments/staging/values.yaml
+  verification:
+    - health:
+        timeout: 5m
+        required: true

@@ -1,0 +1,21 @@
+piVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: staging
+  namespace: kargo
+spec:
+  upstreamStages:
+    - dev
+  subscriptions:
+    repos:
+      - repoURL: https://github.com/YOUR_ORG/your-repo
+        commit: latest
+  promotionMechanisms:
+    gitRepoUpdates:
+      - repoURL: https://github.com/YOUR_ORG/your-repo
+        writeBranch: main
+        files:
+          - path: infra/environments/prod/values.yaml
+  verification:
+    - integrationTests:
+        script: ./scripts/integration-tests.sh

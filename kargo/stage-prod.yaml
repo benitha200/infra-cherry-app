@@ -1,0 +1,17 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prod
+  namespace: kargo
+spec:
+  upstreamStages:
+    - staging
+  subscriptions:
+    repos:
+      - repoURL: https://github.com/YOUR_ORG/your-repo
+        commit: latest
+  verification:
+    - smokeTests:
+        script: ./scripts/smoke-tests.sh
+  approval:
+    manualGate: true

@@ -1,0 +1,8 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Project
+metadata:
+  name: myapp
+  namespace: kargo
+spec:
+  repositories:
+    - repoURL: https://github.com/YOUR_ORG/your-repo
