@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: iyuyisenga/cherry-app-frontend-test
+  tag: dev
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+
+env:
+  APP_ENV: development
+  LOG_LEVEL: debug

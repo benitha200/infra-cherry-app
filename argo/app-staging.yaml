@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_ORG/your-repo
+    repoURL: https://github.com/benitha200/infra-cherry-app.git
     targetRevision: main
     path: infra/environments/staging
     helm:

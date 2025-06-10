@@ -6,7 +6,7 @@ metadata:
 spec:
   subscriptions:
     repos:
-      - repoURL: https://github.com/YOUR_ORG/your-repo
+      - repoURL: https://github.com/benitha200/infra-cherry-app.git
         commit: latest
   stageRefs:
     - name: dev

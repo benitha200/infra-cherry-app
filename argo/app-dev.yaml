@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/benitha200/cherr
+    repoURL: https://github.com/benitha200/infra-cherry-app.git
     targetRevision: main
-    path: infra/environments/dev
+    path: environments/dev
     helm:
       valueFiles:
         - values.yaml

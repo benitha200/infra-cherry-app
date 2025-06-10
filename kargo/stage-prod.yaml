@@ -2,16 +2,12 @@ apiVersion: kargo.akuity.io/v1alpha1
 kind: Stage
 metadata:
   name: prod
-  namespace: kargo
+  namespace: cherryapp
 spec:
-  upstreamStages:
-    - staging
-  subscriptions:
-    repos:
-      - repoURL: https://github.com/YOUR_ORG/your-repo
-        commit: latest
-  verification:
-    - smokeTests:
-        script: ./scripts/smoke-tests.sh
-  approval:
-    manualGate: true
+  requestedFreight:
+    - origin:
+        kind: Warehouse
+        name: cherryapp-warehouse
+      sources:
+        stages:
+          - staging

@@ -1,8 +1,7 @@
 apiVersion: kargo.akuity.io/v1alpha1
 kind: Project
 metadata:
-  name: myapp
-  namespace: kargo
+  name: cherryapp
+  namespace: cherryapp  # Add this line
 spec:
-  repositories:
-    - repoURL: https://github.com/YOUR_ORG/your-repo
+  # Your project spec here

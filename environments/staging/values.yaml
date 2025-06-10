@@ -1,0 +1,14 @@
+replicaCount: 2
+
+image:
+  repository: iyuyisenga/cherry-app-frontend-test
+  tag: staging
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+env:
+  APP_ENV: staging
+  LOG_LEVEL: info

@@ -1,0 +1,14 @@
+# infra/kargo/warehouse.yaml
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: cherryapp-warehouse
+  namespace: cherryapp
+spec:
+  subscriptions:
+    - git:
+        repoURL: https://github.com/benitha200/infra-cherry-app
+    - image:
+        repoURL: iyuyisenga/cherry-app-frontend-test
+    - image:
+        repoURL: iyuyisenga/cherry-app-backend-test
