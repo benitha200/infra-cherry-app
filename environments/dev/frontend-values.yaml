@@ -1,6 +1,7 @@
 image:
   repository: iyuyisenga/cherry-app-frontend-test
   tag: latest
+  pullPolicy: Always
 
 service:
   type: NodePort
