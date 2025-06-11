@@ -15,7 +15,7 @@ spec:
         - ../../environments/dev/frontend-values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: cherryapp
   syncPolicy:
     automated:
       prune: true
@@ -39,7 +39,7 @@ spec:
         - ../../environments/dev/backend-values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: cherryapp
   syncPolicy:
     automated:
       prune: true
@@ -63,7 +63,7 @@ spec:
         - ../../environments/dev/mysql-values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: cherryapp
   syncPolicy:
     automated:
       prune: true
