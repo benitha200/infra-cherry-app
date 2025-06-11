@@ -33,7 +33,7 @@ spec:
   source:
     repoURL: https://github.com/benitha200/infra-cherry-app.git
     targetRevision: main
-    path: infra-cherry-app/backend
+    path: charts/backend
     helm:
       valueFiles:
         - ../../environments/dev/backend-values.yaml
@@ -57,7 +57,7 @@ spec:
   source:
     repoURL: https://github.com/benitha200/infra-cherry-app.git
     targetRevision: main
-    path: infra-cherry-app/mysql
+    path: charts/mysql
     helm:
       valueFiles:
         - ../../environments/dev/mysql-values.yaml
