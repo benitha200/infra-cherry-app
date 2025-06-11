@@ -1,3 +1,9 @@
 image:
   repository: iyuyisenga/cherry-app-frontend-test
   tag: latest
+
+service:
+  type: NodePort
+  port: 80        # The service port exposed inside the cluster
+  nodePort: 30080 # Optional: specify the external port exposed on the node (must be between 30000–32767)
+
