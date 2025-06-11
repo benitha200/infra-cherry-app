@@ -1,3 +1,4 @@
 image:
   repository: iyuyisenga/cherry-app-backend-test
   tag: latest
+  pullPolicy: Always
