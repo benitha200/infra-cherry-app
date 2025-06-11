@@ -1,14 +1,15 @@
-replicaCount: 1
+frontend:
+  image:
+    repository: iyuyisenga/cherry-app-frontend-test
+    tag: dev
 
-image:
-  repository: iyuyisenga/cherry-app-frontend-test
-  tag: dev
-  pullPolicy: Always
+backend:
+  image:
+    repository: iyuyisenga/cherry-app-backend-test
+    tag: dev
 
-service:
-  type: ClusterIP
-  port: 80
+mysql:
+  enabled: true
+  rootPassword: password
+  database: appdb
 
-env:
-  APP_ENV: development
-  LOG_LEVEL: debug

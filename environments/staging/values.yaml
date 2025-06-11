@@ -1,14 +1,14 @@
-replicaCount: 2
+frontend:
+  image:
+    repository: iyuyisenga/cherry-app-frontend-test
+    tag: staging
 
-image:
-  repository: iyuyisenga/cherry-app-frontend-test
-  tag: staging
-  pullPolicy: IfNotPresent
+backend:
+  image:
+    repository: iyuyisenga/cherry-app-backend-test
+    tag: staging
 
-service:
-  type: ClusterIP
-  port: 80
-
-env:
-  APP_ENV: staging
-  LOG_LEVEL: info
+mysql:
+  enabled: true
+  rootPassword: password
+  database: appdb
