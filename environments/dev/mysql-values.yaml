@@ -1,0 +1,3 @@
+enabled: true
+rootPassword: password
+database: appdb

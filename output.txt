@@ -1,0 +1,74 @@
+.
+├── argo
+│   ├── app-dev.yaml
+│   ├── app-prod.yaml
+│   └── app-staging.yaml
+├── environments
+│   ├── dev
+│   │   ├── backend-values.yaml
+│   │   ├── frontend-values.yaml
+│   │   ├── mysql-values.yaml
+│   │   └── values.yaml
+│   ├── prod
+│   │   └── values.yaml
+│   └── staging
+│       └── values.yaml
+├── infra-cherry-app
+│   └── charts
+│       ├── backend
+│       │   ├── charts
+│       │   ├── Chart.yaml
+│       │   ├── templates
+│       │   │   ├── deployment.yaml
+│       │   │   ├── _helpers.tpl
+│       │   │   ├── hpa.yaml
+│       │   │   ├── ingress.yaml
+│       │   │   ├── NOTES.txt
+│       │   │   ├── serviceaccount.yaml
+│       │   │   ├── service.yaml
+│       │   │   └── tests
+│       │   │       └── test-connection.yaml
+│       │   ├── values-dev.yaml
+│       │   └── values.yaml
+│       ├── frontend
+│       │   ├── charts
+│       │   ├── Chart.yaml
+│       │   ├── templates
+│       │   │   ├── deployment.yaml
+│       │   │   ├── _helpers.tpl
+│       │   │   ├── hpa.yaml
+│       │   │   ├── ingress.yaml
+│       │   │   ├── NOTES.txt
+│       │   │   ├── serviceaccount.yaml
+│       │   │   ├── service.yaml
+│       │   │   └── tests
+│       │   │       └── test-connection.yaml
+│       │   ├── values-dev.yaml
+│       │   └── values.yaml
+│       └── mysql
+│           ├── Chart.lock
+│           ├── charts
+│           │   └── mysql-13.0.0.tgz
+│           ├── Chart.yaml
+│           ├── templates
+│           │   ├── deployment.yaml
+│           │   ├── _helpers.tpl
+│           │   ├── hpa.yaml
+│           │   ├── ingress.yaml
+│           │   ├── NOTES.txt
+│           │   ├── serviceaccount.yaml
+│           │   ├── service.yaml
+│           │   └── tests
+│           │       └── test-connection.yaml
+│           ├── values-dev.yaml
+│           └── values.yaml
+├── kargo
+│   ├── project.yaml
+│   ├── stage-dev.yaml
+│   ├── stage-prod.yaml
+│   ├── stage-staging.yaml
+│   ├── warehouse.yaml
+│   └── watcher.yaml
+└── output.txt
+
+21 directories, 51 files

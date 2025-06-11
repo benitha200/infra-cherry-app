@@ -1,0 +1,19 @@
+mysql:
+  auth:
+    rootPassword: rootpass
+    database: myappdb
+    username: myuser
+    password: mypassword
+
+  primary:
+    persistence:
+      enabled: true
+      size: 1Gi
+      storageClass: "longhorn"
+    resources:
+      limits:
+        cpu: 200m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 256Mi
